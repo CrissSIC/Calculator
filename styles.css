@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background-color: lightgray;
+}
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 15px;
+  gap: 15px;
+  padding: 20px;
+  background-color: gray;
+}
+.screen {
+  width: 350px;
+  height: 100px;
+  background-color: rgb(147, 112, 219);
+  border-radius: 5px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.screen-total {
+  font-size: 20px;
+  text-align: end;
+  padding: 5px 20px 5px 5px;
+  color: yellow;
+}
+.screen-current {
+  font-size: 35px;
+  text-align: end;
+  padding: 20px;
+  color: yellow;
+}
+.buttonsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . equalsArea"
+    ". . . equalsArea";
+  grid-gap: 5px;
+}
+button {
+  padding: 25px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(147, 112, 219);
+  font-size: 20px;
+  color: yellow;
+}
+.itemEquals {
+  grid-area: equalsArea;
+  background-color: rgb(3, 160, 98);
+}
+.deleteAll {
+  background-color: rgb(220, 20, 60);
+}
+.deleteLast {
+  background-color: rgb(205, 92, 92);
+}
